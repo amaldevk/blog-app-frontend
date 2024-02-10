@@ -16,10 +16,10 @@ const NavBlog = () => {
           <Link class="nav-link active" aria-current="page" to="/add">ADDPOST</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="#">VIEWPOST</Link>
+          <Link class="nav-link" to="/viewall">VIEWPOST</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="#">LOGOUT</Link>
+          <Link class="nav-link" to="/">LOGOUT</Link>
         </li>
         
       </ul>
