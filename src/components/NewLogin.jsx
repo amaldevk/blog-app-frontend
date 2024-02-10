@@ -38,7 +38,8 @@ const NewLogin = () => {
                 else{
                     alert("success")
                     console.log(response.data.userData._id)
-                    //navigate("/add")
+                    sessionStorage.setItem("userId",response.data.userData._id)
+                    navigate("/add")
                 }
             }
         )

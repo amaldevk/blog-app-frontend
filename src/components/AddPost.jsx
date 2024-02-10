@@ -5,6 +5,7 @@ import axios from 'axios'
 const AddPost = () => {
     const [input,setInput] = new useState(
         {
+            userId:sessionStorage.getItem("userId"),
             post:""
         }
     )
@@ -13,7 +14,7 @@ const AddPost = () => {
     }
     const readValues = ()=>{
         console.log(input)
-        axios.post("http://localhost:3001/api/post/add").then(
+        axios.post("http://localhost:3001/api/post/add",input).then(
             (response)=>{
                 console.log(response.data)
                 if (response.data.status == "success") {
