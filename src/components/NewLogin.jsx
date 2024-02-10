@@ -37,7 +37,8 @@ const NewLogin = () => {
                 }
                 else{
                     alert("success")
-                    navigate("/add")
+                    console.log(response.data.userData._id)
+                    //navigate("/add")
                 }
             }
         )
@@ -55,7 +56,7 @@ const NewLogin = () => {
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <label htmlFor="" className="form-label">password</label>
-                            <input type="text" className="form-control" name='Password' value={input.Password} onChange={inputHandler}/>
+                            <input type="password" className="form-control" name='Password' value={input.Password} onChange={inputHandler}/>
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <button className="btn btn-success" onClick={readValues}>LOGIN</button>
